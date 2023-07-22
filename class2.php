@@ -66,13 +66,4 @@
 			}
 		}
 	}
-
-	//$conditions = array
-	//(
-		//"city_of_birth" => "Minsk",
-	//);
-
-	//$listOfPersons = new Persons($conditions);
-	//$listOfPersons->deletingPersons();
-	//print_r($listOfPersons->getArrayOfPersons());
 ?>

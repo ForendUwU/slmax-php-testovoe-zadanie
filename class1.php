@@ -74,13 +74,11 @@
 
         public static function getAge(string $BirthDate)
         {
-            $d1 = strtotime($BirthDate);
-            $formattedBirthDate = date("Y-m-d", $d1);
-            $DateTimeBirthday = new DateTime($formattedBirthDate);
+            $dateTimeBirthday = date_create_from_format('Y.m.d', $BirthDate);
+            $dateTimeNow = new DateTime('now');
+            $interval = $dateTimeNow->diff($dateTimeBirthday);
 
-            $age = $DateTimeBirthday->diff(new DateTime);
-
-            return $age->y;
+            return $interval->y;
         }
 
         public static function convertGeneder(bool $gender)
@@ -94,7 +92,7 @@
             }
         }
 
-        public function transform(bool $genderBoolOrString, bool $birthDateAgeOrDate)
+        public function formatting(bool $genderBoolOrString, bool $birthDateAgeOrDate)
         {
             $formattedPerson = new stdClass();
             
@@ -120,11 +118,4 @@
             return $formattedPerson;
         }
 	}
-
-    //$pers1 = new Person(1, "Nikita", "Perepelov", "2004.06.04", 1, "Minsk");
-    //$pers2 = new Person(2, "Ann", "Ryzhkovskaya", "2003.12.19", 0, "Minsk");
-    //echo $pers1->transform(true, false)->Gender."\n";
-    //echo $pers1->transform(false, false)->Gender."\n";
-    //echo $pers1->transform(false, true)->Age."\n";
-    //echo $pers1->transform(false, false)->BirthDate."\n";
  ?>
