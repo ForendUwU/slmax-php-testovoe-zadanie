@@ -121,10 +121,10 @@
         }
 	}
 
-    $pers1 = new Person(1);
-    $pers2 = new Person(2, "Ann", "Ryzhkovskaya", "2003.12.19", 0, "Minsk");
-    echo $pers1->transform(true, false)->Gender."\n";
-    echo $pers1->transform(false, false)->Gender."\n";
-    echo $pers1->transform(false, true)->Age."\n";
-    echo $pers1->transform(false, false)->BirthDate."\n";
+    //$pers1 = new Person(1, "Nikita", "Perepelov", "2004.06.04", 1, "Minsk");
+    //$pers2 = new Person(2, "Ann", "Ryzhkovskaya", "2003.12.19", 0, "Minsk");
+    //echo $pers1->transform(true, false)->Gender."\n";
+    //echo $pers1->transform(false, false)->Gender."\n";
+    //echo $pers1->transform(false, true)->Age."\n";
+    //echo $pers1->transform(false, false)->BirthDate."\n";
  ?>
